@@ -5,12 +5,12 @@ class PersonCard extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            AddAge: this.props.Age,
+            addAge: this.props.age,
         };
     }
 
     render() {
-        const { FirstName, LastName, Age, HairColor } = this.props;
+        const { FirstName, LastName, age, HairColor } = this.props;
 
         return (
             <>
@@ -18,12 +18,12 @@ class PersonCard extends React.Component {
                     <h1>
                         {LastName}, {FirstName}
                     </h1>
-                    <p>Age: {this.state.AddAge}</p>
+                    <p>Age: {this.state.addAge}</p>
                     <p>Hair Color: {HairColor}</p>
                 </div>
                 <button
                     onClick={() => {
-                        this.setState({ AddAge: this.state.AddAge + 1 });
+                        this.setState({ addAge: this.state.addAge + 1 });
                     }}
                 >
                     Birthday Button for {FirstName} {LastName}
